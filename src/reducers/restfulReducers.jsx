@@ -2,7 +2,7 @@ const initialState = {
   url: '',
   method: 'GET',
   textBody: '',
-  response: [],
+  response: {},
   history: []
 };
 
@@ -17,6 +17,8 @@ export default function restfulReducer(state = initialState, action) {
     case 'ADD_HISTORY': 
       state.history.push(action.payload);
       return { ...state };
+    case 'ADD_RESPONSE':
+      return { ...state, response: action.payload };
     default:
       return state;
   }

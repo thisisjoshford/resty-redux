@@ -1,5 +1,5 @@
 import reducer from './restfulReducers';
-import { setUrl, setMethod, setTextBody, addHistory } from '../actions/restfulActions';
+import { setUrl, setMethod, setTextBody, addHistory, addResponse } from '../actions/restfulActions';
 
 describe('resty reducer', () => {
   const state = {};
@@ -62,4 +62,21 @@ describe('resty reducer', () => {
       ]
     });
   });
+
+  it('handles adding response action', () => {
+    const res = {
+      name: 'josh',
+      class: 'human'
+    };
+    const newResponse = addResponse(res);
+    const newResponseState = reducer(state, newResponse);
+
+    expect(newResponseState).toEqual({
+      response: {
+        name: 'josh',
+        class: 'human'
+      }
+    });
+  });
+
 });

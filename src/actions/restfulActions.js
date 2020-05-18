@@ -17,3 +17,9 @@ export const addHistory = (newFetch) => ({
   type: 'ADD_HISTORY',
   payload: newFetch
 });
+
+export const addResponse = (response) => ({
+  type: 'ADD_RESPONSE',
+  payload: response
+});
+
