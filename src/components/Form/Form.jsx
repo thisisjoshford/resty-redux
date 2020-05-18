@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './FormStyle.css';
-import { useProvider } from '../../hooks/Provider';
 import { useSubmitForm } from '../../hooks/submitFormHooks';
 
 const Form = () => {
