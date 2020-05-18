@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form component renders Form 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "history": Array [],
+      "method": "GET",
+      "onChange": [Function],
+      "onSubmit": [Function],
+      "response": Array [],
+      "textBody": "",
+      "url": "",
+    }
+  }
+>
+  <Form />
+</ContextProvider>
+`;

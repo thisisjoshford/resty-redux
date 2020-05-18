@@ -1,0 +1,28 @@
+.Form {
+  display: flex;
+  justify-content: left;
+ 
+  label {
+    cursor: pointer;
+    margin-left: .5rem;
+  }
+
+  input[type="radio"]:hover {
+    background-color: purple;
+    color: white;
+
+  }
+  input[type="radio"]:checked+label {
+    background-color: gold
+  }
+}
+
+.Url {
+  height: 20px;
+  width: 300px;
+  box-shadow: grey 3px 3px;
+}
+
+.Radio {
+  font-size: x-large;
+}

@@ -1,0 +1,7 @@
+.Box {
+  max-width: 90%;
+  height: 300px;
+  border: solid black 1px;
+  background-color: lightgray;
+  overflow: scroll;
+}
