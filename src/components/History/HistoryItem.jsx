@@ -1,8 +1,8 @@
 import React from 'react';
-import { useProvider } from '../../hooks/Provider';
+import { useSubmitForm } from '../../hooks/submitFormHooks';
 
 const HistoryItem = () => {
-  const { url, method } = useProvider();
+  const { url, method } = useSubmitForm();
 
   return (
     <section>

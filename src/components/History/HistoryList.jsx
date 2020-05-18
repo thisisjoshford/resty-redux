@@ -1,9 +1,10 @@
 import React from 'react';
 import HistoryItem from './HistoryItem';
-import { useProvider } from '../../hooks/Provider';
+import { useSubmitForm } from '../../hooks/submitFormHooks';
 
 const HistoryList = () => {
-  const { history } = useProvider();
+  const { history } = useSubmitForm;
+  
   const historyNodes = history
     .map((item, i) => (
       <li key={i}>
