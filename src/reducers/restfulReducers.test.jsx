@@ -1,13 +1,11 @@
-import { getUrl } from '../selectors/selectors';
-
 import reducer from './restfulReducers';
-import { setUrl } from '../actions/restfulActions';
+import { setUrl, setMethod } from '../actions/restfulActions';
 
 describe('resty reducer', () => {
-  it('handles get url action', () => {
-    const state = { url: '' };
-    const newUrl = setUrl('http://www.awesomeapi.com');
+  const state = {};
 
+  it('handles set url action', () => {
+    const newUrl = setUrl('http://www.awesomeapi.com');
     const newUrlState = reducer(state, newUrl);
 
     expect(newUrlState).toEqual({
@@ -15,4 +13,12 @@ describe('resty reducer', () => {
     });
   });
 
+  it('handles set method action', () => {
+    const newMethod = setMethod('PUT');
+    const newMethodState = reducer(state, newMethod);
+
+    expect(newMethodState).toEqual({
+      method: 'PUT'
+    });
+  });
 });
