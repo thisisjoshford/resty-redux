@@ -12,3 +12,8 @@ export const setTextBody = (textBody) => ({
   type: 'SET_TEXT',
   payload: textBody
 });
+
+export const addHistory = (newFetch) => ({
+  type: 'ADD_HISTORY',
+  payload: newFetch
+});

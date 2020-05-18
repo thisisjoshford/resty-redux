@@ -1,5 +1,5 @@
 import reducer from './restfulReducers';
-import { setUrl, setMethod, setTextBody } from '../actions/restfulActions';
+import { setUrl, setMethod, setTextBody, addHistory } from '../actions/restfulActions';
 
 describe('resty reducer', () => {
   const state = {};
@@ -28,6 +28,38 @@ describe('resty reducer', () => {
 
     expect(newTextBodyState).toEqual({
       textBody: 'This is the text body'
+    });
+  });
+
+  it('adds a new fetch to the history', () => {
+    const state = {
+      history: [
+        {
+          url: 'http://www.apiFetch1.com',
+          method: 'GET'
+        }
+      ]
+    };
+
+    const newFetch = {
+      url: 'http://www.apiFetch2.com',
+      method: 'PUT'
+    };
+
+    const newHistoryItem = addHistory(newFetch);
+    const newHistoryState = reducer(state, newHistoryItem);
+    
+    expect(newHistoryState).toEqual({
+      history: [
+        {
+          url: 'http://www.apiFetch1.com',
+          method: 'GET'
+        },
+        {
+          url: 'http://www.apiFetch2.com',
+          method: 'PUT'
+        }
+      ]
     });
   });
 });

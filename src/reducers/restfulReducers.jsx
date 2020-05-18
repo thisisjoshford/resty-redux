@@ -14,6 +14,9 @@ export default function restfulReducer(state = initialState, action) {
       return { ...state, method: action.payload };
     case 'SET_TEXT':
       return { ...state, textBody: action.payload };
+    case 'ADD_HISTORY': 
+      state.history.push(action.payload);
+      return { ...state };
     default:
       return state;
   }
