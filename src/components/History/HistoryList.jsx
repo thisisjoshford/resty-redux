@@ -3,7 +3,7 @@ import HistoryItem from './HistoryItem';
 import { useSubmitForm } from '../../hooks/submitFormHooks';
 
 const HistoryList = () => {
-  const { history } = useSubmitForm;
+  const { history } = useSubmitForm();
   
   const historyNodes = history
     .map((item, i) => (

@@ -5,11 +5,11 @@ import { addResponse, addHistory, setUrl, setMethod, setTextBody } from '../acti
 
 export const useSubmitForm = () => {
   const dispatch = useDispatch();
-  const url = useSelector(getUrl());
-  const method = useSelector(getMethod());
-  const textBody = useSelector(getTextBody());
-  const response = useSelector(getResponse());
-  const history = useSelector (getHistory());
+  const url = useSelector(getUrl);
+  const method = useSelector(getMethod);
+  const textBody = useSelector(getTextBody);
+  const response = useSelector(getResponse);
+  const history = useSelector (getHistory);
 
   const onChange = ({ target }) => {
     if(target.name === 'url') dispatch(setUrl(target.value));
