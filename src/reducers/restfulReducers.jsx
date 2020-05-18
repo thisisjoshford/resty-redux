@@ -9,7 +9,7 @@ const initialState = {
 export default function restfulReducer(state = initialState, action) {
   switch(action.type){
     case 'SET_URL':
-      return { ...state, url: action.url };
+      return { ...state, url: action.payload.url };
     default:
       return state;
   }
