@@ -1,5 +1,5 @@
 import reducer from './restfulReducers';
-import { setUrl, setMethod } from '../actions/restfulActions';
+import { setUrl, setMethod, setTextBody } from '../actions/restfulActions';
 
 describe('resty reducer', () => {
   const state = {};
@@ -19,6 +19,15 @@ describe('resty reducer', () => {
 
     expect(newMethodState).toEqual({
       method: 'PUT'
+    });
+  });
+
+  it('handles set text body action', () => {
+    const newTextBody = setTextBody('This is the text body');
+    const newTextBodyState = reducer(state, newTextBody);
+
+    expect(newTextBodyState).toEqual({
+      textBody: 'This is the text body'
     });
   });
 });
