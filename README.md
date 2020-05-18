@@ -1,4 +1,4 @@
-### RESTy Conversion to Context and Hooks
+### RESTy Conversion from Context to Redux
 
 # Design and overall functionality
 [] - Input field for entering a URL
