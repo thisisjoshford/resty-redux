@@ -1,3 +1,5 @@
+import { fetchRequest } from '../services/fetchRequest';
+
 export const setUrl = (url) => ({
   type: 'SET_URL',
   payload: url
@@ -23,3 +25,10 @@ export const addResponse = (response) => ({
   payload: response
 });
 
+export const hitApi = (url, method, textBody) => dispatch => {
+  return fetchRequest(url, method, textBody)
+    .then(res => {
+      dispatch(addResponse(res));
+      dispatch(addHistory(({ url, method }))
+      );});
+};

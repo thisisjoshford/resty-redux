@@ -1,7 +1,6 @@
-import { fetchRequest } from '../services/fetchRequest';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUrl, getMethod, getTextBody, getResponse, getHistory } from '../selectors/selectors';
-import { addResponse, addHistory, setUrl, setMethod, setTextBody } from '../actions/restfulActions';
+import { setUrl, setMethod, setTextBody, hitApi } from '../actions/restfulActions';
 
 export const useSubmitForm = () => {
   const dispatch = useDispatch();
@@ -19,12 +18,7 @@ export const useSubmitForm = () => {
 
   const onSubmit = event => {
     event.preventDefault();
-    dispatch(fetchRequest(url, method, textBody)
-      .then(res => {
-        addResponse(res);
-        addHistory(prevHistory => 
-          [{ url, method }, ...prevHistory]);
-      }));
+    dispatch(hitApi(url, method, textBody));
   };
 
   return {
