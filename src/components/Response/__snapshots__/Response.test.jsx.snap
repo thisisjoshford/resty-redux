@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`History list component renders History list 1`] = `
+exports[`Response component renders the response component 1`] = `
 <ContextProvider
   value={
     Object {
@@ -30,6 +30,6 @@ exports[`History list component renders History list 1`] = `
     }
   }
 >
-  <HistoryList />
+  <Response />
 </ContextProvider>
 `;
