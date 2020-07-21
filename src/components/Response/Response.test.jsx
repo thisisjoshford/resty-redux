@@ -1,16 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import HistoryList from './HistoryList';
+import Response from './Response';
 import { Provider } from 'react-redux';
 import store from '../../store';
 
-describe('History list component', () => {
-  it('renders History list', () => {
+describe('Response component', () => {
+  it('renders the response component', () => {
 
     const wrapper = shallow(
       <Provider store={store}>
-        <HistoryList/>
+        <Response />
       </Provider>
+      
     );
     expect(wrapper).toMatchSnapshot();
   });

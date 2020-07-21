@@ -1,17 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Form from './Form';
-import { RestyProvider } from '../../hooks/Provider';
+import { Provider } from 'react-redux';
+import store from '../../store.js';
 
 describe('Form component', () => {
 
-  const url = 'http://www.randomapi.com/';
-
   it('renders Form', () => {
     const wrapper = shallow(
-      <RestyProvider>
+      <Provider store={store}>
         <Form />
-      </RestyProvider>
+      </Provider> 
     );
     expect(wrapper).toMatchSnapshot();
   });

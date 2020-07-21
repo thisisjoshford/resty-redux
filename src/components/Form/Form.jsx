@@ -1,9 +1,15 @@
 import React from 'react';
 import style from './FormStyle.css';
-import { useProvider } from '../../hooks/Provider';
+import { useSubmitForm } from '../../hooks/submitFormHooks';
 
 const Form = () => {
-  const { url, method, textBody, onChange, onSubmit } = useProvider();
+  const {     
+    url,
+    method,
+    textBody,
+    onChange,
+    onSubmit } = useSubmitForm();
+    
   return (
     <div className={style.Form}>
       <form className={style.Form} onSubmit={onSubmit}>

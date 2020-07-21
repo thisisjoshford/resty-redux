@@ -4,13 +4,29 @@ exports[`Form component renders Form 1`] = `
 <ContextProvider
   value={
     Object {
-      "history": Array [],
-      "method": "GET",
-      "onChange": [Function],
-      "onSubmit": [Function],
-      "response": Array [],
-      "textBody": "",
-      "url": "",
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": null,
+      },
     }
   }
 >
